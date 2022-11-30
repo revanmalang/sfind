@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+
+# Really i'm just feel so bad today, so i create this tool for u
+# hope you can enjoy it :)
+
+import sys
+import os
+
+
+class findMe:
+	def __init__(self, data, word):
+		pecah = data.split(word)
+		del pecah[0]
+		for hasil in pecah:
+			print(word+hasil[:100]) # you can change to set your output 
+
+
+if sys.stdin.isatty() != True:
+	data = sys.stdin.read()
+	findMe(data, sys.argv[1])
+else:
+	try:
+		o = open(sys.argv[1], "r").read()
+		findMe(o, sys.argv[2])
+	except:
+		pass
+    
+
+#iso nyawang 
+#ra iso nyanding
